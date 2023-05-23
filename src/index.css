@@ -2,33 +2,10 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -36,34 +13,59 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.calc-wrapper {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* =================================================== ==> */
+.calculator {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 5px;
+  background-color: #fff;
+  overflow: hidden;
+  border: 1px solid #b5b5b5;
+}
+
+.cal-display-container {
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--dark);
+  color: var(--light);
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.cal-display-container span {
+  font-size: 0.913rem;
+  color: #888;
+}
+
+.operators-container {
+  display: flex;
+  width: 100%;
+}
+
+.operators-container > button {
+  flex-basis: 20%;
+  border: 1px solid #e9e9e9;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #e0f3ff;
+}
+
+.digits-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.digits-container > button {
+  flex-basis: 33.33%;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: aliceblue;
 }
